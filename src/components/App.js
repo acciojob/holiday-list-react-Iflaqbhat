@@ -39,7 +39,7 @@ const App = () => {
       {cityList.map((city, index) => {
         if (city.country === "India") {
           return (
-            <ol key={index}>
+            <ol key={`location${index + 1}`}>
               <li>
                 <div>
                   <h2>{city.name}</h2>
