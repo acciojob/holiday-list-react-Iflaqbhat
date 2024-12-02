@@ -36,18 +36,17 @@ const App = () => {
   return (
     <div id="main">
       {/* Do not remove the main div */}
-      {cityList.map((city, index) => {
+      {cityList.filter((city, index) => {
         if (city.country === "India") {
-          return (
-            <ol key={`location${index + 1}`}>
-              <li>
-                <div>
-                  <h2>{city.name}</h2>
-                  <p>{city.country}</p>
-                </div>
-              </li>
-            </ol>
-          );
+          return;
+          <ol key={`location${index + 1}`}>
+            <li>
+              <div>
+                <h2>{city.name}</h2>
+                <p>{city.country}</p>
+              </div>
+            </li>
+          </ol>;
         }
         return null; // To ensure map() returns something even if the condition is false
       })}
